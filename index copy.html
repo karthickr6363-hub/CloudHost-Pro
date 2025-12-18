@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudHost Pro - Fast, Secure, Scalable Cloud Hosting</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-['Inter'] transition-colors duration-300" id="body">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-2xl">☁️</span>
+                    </div>
+                    <span class="text-2xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">CloudHost Pro</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+                    <a href="index.html#features" class="hover:text-cyan-400 transition-colors">Features</a>
+                    <a href="about.html" class="hover:text-cyan-400 transition-colors">About</a>
+                    <a href="services.html" class="hover:text-cyan-400 transition-colors">Services</a>
+                    <a href="blog.html" class="hover:text-cyan-400 transition-colors">Blog</a>
+                    <button id="darkModeToggle" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+                        <span id="darkModeIcon">🌙</span>
+                    </button>
+                    <a href="login.html" class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all">Login</a>
+                </div>
+                <button class="md:hidden" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Glass Morphism -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="container mx-auto max-w-7xl relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20">
+                        <span class="text-sm font-medium">🚀 Trusted by 50,000+ businesses worldwide</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold font-['Space_Grotesk'] leading-tight">
+                        Fast, Secure, Scalable
+                        <span class="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Cloud Hosting</span>
+                        for Everyone
+                    </h1>
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        Experience lightning-fast performance with 99.99% uptime guarantee. Deploy your applications in seconds with our cutting-edge cloud infrastructure.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all transform hover:scale-105">
+                            Get Started Free
+                        </button>
+                        <button class="px-8 py-4 backdrop-blur-xl bg-white/10 border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-all">
+                            View Pricing
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-8 pt-8">
+                        <div class="backdrop-blur-xl bg-white/5 p-4 rounded-lg border border-white/10">
+                            <div class="flex items-center gap-2">
+                                <span class="text-2xl">🔒</span>
+                                <span class="text-sm">ISO 27001</span>
+                            </div>
+                        </div>
+                        <div class="backdrop-blur-xl bg-white/5 p-4 rounded-lg border border-white/10">
+                            <div class="flex items-center gap-2">
+                                <span class="text-2xl">🛡️</span>
+                                <span class="text-sm">SSL Certified</span>
+                            </div>
+                        </div>
+                        <div class="backdrop-blur-xl bg-white/5 p-4 rounded-lg border border-white/10">
+                            <div class="flex items-center gap-2">
+                                <span class="text-2xl">✅</span>
+                                <span class="text-sm">SOC 2 Type II</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="backdrop-blur-2xl bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
+                            <div class="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10">
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+                                        <span class="text-sm text-gray-400 font-['JetBrains_Mono']">cloudhost.pro</span>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 mt-6">
+                                        <div class="bg-gradient-to-br from-cyan-500/20 to-transparent p-4 rounded-lg border border-cyan-500/30">
+                                            <div class="text-2xl font-bold text-cyan-400">99.99%</div>
+                                            <div class="text-xs text-gray-400">Uptime</div>
+                                        </div>
+                                        <div class="bg-gradient-to-br from-purple-500/20 to-transparent p-4 rounded-lg border border-purple-500/30">
+                                            <div class="text-2xl font-bold text-purple-400">0.2s</div>
+                                            <div class="text-xs text-gray-400">Response</div>
+                                        </div>
+                                        <div class="bg-gradient-to-br from-pink-500/20 to-transparent p-4 rounded-lg border border-pink-500/30">
+                                            <div class="text-2xl font-bold text-pink-400">50K+</div>
+                                            <div class="text-xs text-gray-400">Users</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section - Neomorphism -->
+    <section id="features" class="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Key Features</h2>
+                <p class="text-xl text-gray-400">Everything you need for world-class cloud hosting</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="neo-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3">Ultra-Fast Speed</h3>
+                    <p class="text-gray-400">SSD storage and optimized servers deliver lightning-fast load times for your applications.</p>
+                </div>
+                <div class="neo-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🔄</div>
+                    <h3 class="text-2xl font-bold mb-3">99.99% Uptime Guarantee</h3>
+                    <p class="text-gray-400">Enterprise-grade infrastructure ensures your services stay online around the clock.</p>
+                </div>
+                <div class="neo-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🔐</div>
+                    <h3 class="text-2xl font-bold mb-3">Free SSL & CDN</h3>
+                    <p class="text-gray-400">Free SSL certificates and global CDN included with every plan for enhanced security and speed.</p>
+                </div>
+                <div class="neo-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold mb-3">Scalable Cloud Servers</h3>
+                    <p class="text-gray-400">Scale up or down instantly based on your needs. Pay only for what you use.</p>
+                </div>
+                <div class="neo-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">💬</div>
+                    <h3 class="text-2xl font-bold mb-3">24/7 Live Support</h3>
+                    <p class="text-gray-400">Our expert team is available round the clock to assist you with any issues.</p>
+                </div>
+                <div class="neo-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🌍</div>
+                    <h3 class="text-2xl font-bold mb-3">Global Data Centers</h3>
+                    <p class="text-gray-400">Deploy in 15+ locations worldwide for optimal performance and low latency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us - Glass Morphism -->
+    <section class="py-20 px-6 bg-slate-900">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Why Choose Us?</h2>
+                <p class="text-xl text-gray-400">The advantages that set us apart</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-3">Faster than Traditional Hosting</h3>
+                    <p class="text-gray-400">Our cloud infrastructure delivers up to 10x faster performance compared to traditional shared hosting solutions.</p>
+                </div>
+                <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                    <div class="text-4xl mb-4">💳</div>
+                    <h3 class="text-2xl font-bold mb-3">Pay-as-you-go Model</h3>
+                    <p class="text-gray-400">No long-term contracts. Scale your resources and pay only for what you actually use.</p>
+                </div>
+                <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-pink-500/50 transition-all">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-3">DDoS Protection</h3>
+                    <p class="text-gray-400">Advanced DDoS protection included with all plans to keep your services safe from attacks.</p>
+                </div>
+                <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-bold mb-3">Planet-friendly Green Data Centers</h3>
+                    <p class="text-gray-400">100% renewable energy powered data centers. Host with us and reduce your carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-time Performance Stats - Dark Mode + Neon -->
+    <section class="py-20 px-6 bg-black">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Real-time Performance</h2>
+                <p class="text-xl text-gray-400">Live statistics from our infrastructure</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="neon-card p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-transparent">
+                    <div class="text-5xl font-bold font-['JetBrains_Mono'] text-cyan-400 mb-2" id="uptime">99.99%</div>
+                    <div class="text-gray-400">Server Uptime</div>
+                    <div class="mt-4 h-1 bg-cyan-500/20 rounded-full overflow-hidden">
+                        <div class="h-full bg-cyan-400 rounded-full" style="width: 99.99%"></div>
+                    </div>
+                </div>
+                <div class="neon-card p-8 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-500/10 to-transparent">
+                    <div class="text-5xl font-bold font-['JetBrains_Mono'] text-purple-400 mb-2" id="rps">2.4M</div>
+                    <div class="text-gray-400">Requests/Second</div>
+                    <div class="mt-4 h-1 bg-purple-500/20 rounded-full overflow-hidden">
+                        <div class="h-full bg-purple-400 rounded-full animate-pulse" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="neon-card p-8 rounded-2xl border border-pink-500/30 bg-gradient-to-br from-pink-500/10 to-transparent">
+                    <div class="text-5xl font-bold font-['JetBrains_Mono'] text-pink-400 mb-2" id="customers">50,247</div>
+                    <div class="text-gray-400">Active Customers</div>
+                    <div class="mt-4 h-1 bg-pink-500/20 rounded-full overflow-hidden">
+                        <div class="h-full bg-pink-400 rounded-full" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="neon-card p-8 rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-500/10 to-transparent">
+                    <div class="text-5xl font-bold font-['JetBrains_Mono'] text-green-400 mb-2">15+</div>
+                    <div class="text-gray-400">Global Locations</div>
+                    <div class="mt-4 flex gap-1">
+                        <div class="h-2 w-2 rounded-full bg-green-400 animate-pulse"></div>
+                        <div class="h-2 w-2 rounded-full bg-green-400 animate-pulse" style="animation-delay: 0.2s"></div>
+                        <div class="h-2 w-2 rounded-full bg-green-400 animate-pulse" style="animation-delay: 0.4s"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - Glass Morphism Slider -->
+    <section id="testimonials" class="py-20 px-6 bg-gradient-to-b from-black to-slate-900">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Client Reviews</h2>
+                <p class="text-xl text-gray-400">What our customers say about us</p>
+            </div>
+            <div class="relative">
+                <div class="testimonial-slider overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonialContainer">
+                        <div class="min-w-full px-4">
+                            <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 max-w-4xl mx-auto">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center text-2xl font-bold">JD</div>
+                                    <div>
+                                        <div class="font-bold text-lg">John Doe</div>
+                                        <div class="text-gray-400 text-sm">CEO, TechStart Inc.</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-1 mb-4">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed">"CloudHost Pro has transformed our infrastructure. The speed and reliability are unmatched. Our website load times improved by 80%!"</p>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-4">
+                            <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 max-w-4xl mx-auto">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center text-2xl font-bold">SM</div>
+                                    <div>
+                                        <div class="font-bold text-lg">Sarah Miller</div>
+                                        <div class="text-gray-400 text-sm">CTO, Digital Solutions</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-1 mb-4">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed">"The 24/7 support team is incredible. They helped us migrate our entire infrastructure seamlessly. Highly recommended!"</p>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-4">
+                            <div class="backdrop-blur-xl bg-white/5 p-8 rounded-2xl border border-white/10 max-w-4xl mx-auto">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-cyan-600 flex items-center justify-center text-2xl font-bold">MJ</div>
+                                    <div>
+                                        <div class="font-bold text-lg">Mike Johnson</div>
+                                        <div class="text-gray-400 text-sm">Founder, CloudApps</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-1 mb-4">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed">"Best hosting provider we've ever used. The scalability options are perfect for our growing business. Worth every penny!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-4 mt-8">
+                    <button class="testimonial-nav px-4 py-2 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all" onclick="changeTestimonial(-1)">←</button>
+                    <button class="testimonial-nav px-4 py-2 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all" onclick="changeTestimonial(1)">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations / Tools - Unique Hexagonal & Circular Grid -->
+    <section class="py-20 px-6 bg-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Integrations & Tools</h2>
+                <p class="text-xl text-gray-400">Seamlessly integrate with your favorite tools</p>
+            </div>
+            <div class="integrations-unique-grid">
+                <!-- Large Center Card -->
+                <div class="integration-hero group relative overflow-hidden rounded-3xl p-8 border-2 border-cyan-500/40 bg-gradient-to-br from-cyan-500/20 via-slate-800 to-slate-900 hover:border-cyan-500/70 transition-all transform hover:scale-105 hover:rotate-1">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">☸️</div>
+                        <div class="font-bold text-xl mb-2">Kubernetes</div>
+                        <div class="text-sm text-gray-400">Container orchestration</div>
+                        <div class="mt-4 inline-block px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-xs font-semibold">Featured</div>
+                    </div>
+                </div>
+
+                <!-- Circular Cards -->
+                <div class="integration-circle group relative overflow-hidden rounded-full p-6 border-2 border-purple-500/40 bg-gradient-to-br from-purple-500/15 to-slate-800 hover:border-purple-500/70 transition-all transform hover:scale-110 hover:rotate-6 aspect-square flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-4xl mb-2 group-hover:scale-125 transition-transform">🐳</div>
+                        <div class="font-semibold text-sm">Docker</div>
+                    </div>
+                </div>
+
+                <div class="integration-circle group relative overflow-hidden rounded-full p-6 border-2 border-pink-500/40 bg-gradient-to-br from-pink-500/15 to-slate-800 hover:border-pink-500/70 transition-all transform hover:scale-110 hover:-rotate-6 aspect-square flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-4xl mb-2 group-hover:scale-125 transition-transform">🐙</div>
+                        <div class="font-semibold text-sm">GitHub</div>
+                    </div>
+                </div>
+
+                <!-- Hexagonal Style Cards -->
+                <div class="integration-hex group relative overflow-hidden p-6 border-2 border-green-500/40 bg-gradient-to-br from-green-500/15 to-slate-800 hover:border-green-500/70 transition-all transform hover:scale-105 hover:rotate-3">
+                    <div class="hexagon-clip relative z-10 text-center">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🦊</div>
+                        <div class="font-semibold">GitLab</div>
+                    </div>
+                </div>
+
+                <div class="integration-hex group relative overflow-hidden p-6 border-2 border-yellow-500/40 bg-gradient-to-br from-yellow-500/15 to-slate-800 hover:border-yellow-500/70 transition-all transform hover:scale-105 hover:-rotate-3">
+                    <div class="hexagon-clip relative z-10 text-center">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📝</div>
+                        <div class="font-semibold">WordPress</div>
+                    </div>
+                </div>
+
+                <!-- Diamond Shape Cards -->
+                <div class="integration-diamond group relative overflow-hidden p-6 border-2 border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-slate-800 hover:border-indigo-500/70 transition-all transform hover:scale-110 hover:rotate-45">
+                    <div class="diamond-clip relative z-10 text-center flex flex-col items-center justify-center h-full">
+                        <div class="text-4xl mb-2 group-hover:-rotate-45 transition-transform">⚙️</div>
+                        <div class="font-semibold text-sm">cPanel</div>
+                    </div>
+                </div>
+
+                <!-- Rounded Square with Gradient Border -->
+                <div class="integration-gradient group relative overflow-hidden rounded-2xl p-6 bg-slate-800 hover:bg-slate-700 transition-all transform hover:scale-105">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
+                    <div class="absolute inset-[2px] rounded-2xl bg-slate-800 group-hover:bg-slate-700 transition-colors"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">☁️</div>
+                        <div class="font-semibold">Cloudflare</div>
+                    </div>
+                </div>
+
+                <!-- Star/Octagon Style -->
+                <div class="integration-star group relative overflow-hidden p-6 border-2 border-orange-500/40 bg-gradient-to-br from-orange-500/15 to-slate-800 hover:border-orange-500/70 transition-all transform hover:scale-105 hover:rotate-12">
+                    <div class="star-clip relative z-10 text-center">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🔧</div>
+                        <div class="font-semibold">WHM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs - Neomorphism Accordion -->
+    <section class="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-400">Everything you need to know</p>
+            </div>
+            <div class="space-y-4">
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">How secure is your cloud hosting?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        We employ enterprise-grade security measures including DDoS protection, SSL certificates, regular security audits, and compliance with ISO 27001 and SOC 2 Type II standards. All data is encrypted in transit and at rest.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">What payment methods do you support?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        We accept all major credit cards (Visa, MasterCard, American Express), PayPal, bank transfers, and cryptocurrency payments including Bitcoin and Ethereum.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Do you offer free migration?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        Yes! We offer free migration assistance for all new customers. Our team will help you migrate your websites, databases, and applications at no additional cost.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Can I upgrade or downgrade my plan anytime?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        Absolutely! You can scale your resources up or down instantly through our control panel. Changes take effect immediately, and you only pay for what you use.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">What is your refund policy?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        We offer a 30-day money-back guarantee on all hosting plans. If you're not satisfied, contact us within 30 days for a full refund, no questions asked.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Do you provide backups?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        Yes, we perform daily automated backups for all plans. Pro and Enterprise plans include weekly backups with 30-day retention. You can also create manual backups anytime.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">What kind of support do you offer?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        We offer 24/7 support via live chat, email, and phone. Basic plans include email support, while Pro and Enterprise plans get priority support with faster response times.
+                    </div>
+                </div>
+                <div class="faq-item neo-card rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Where are your data centers located?</span>
+                        <span class="faq-icon text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-400">
+                        We have data centers in 15+ locations worldwide including North America, Europe, Asia-Pacific, and South America. You can choose the location closest to your users for optimal performance.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 px-6 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-6">Ready to launch your cloud server?</h2>
+            <p class="text-xl mb-8 text-white/90">Start your free trial today. No credit card required.</p>
+            <button class="px-10 py-4 bg-white text-purple-600 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all">
+                Start Your Free Trial
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6 border-t border-white/10">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">☁️</span>
+                        </div>
+                        <span class="text-xl font-bold font-['Space_Grotesk']">CloudHost Pro</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Fast, secure, and scalable cloud hosting solutions for businesses of all sizes.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Home</a></li>
+                        <li><a href="#pricing" class="hover:text-cyan-400 transition-colors">Pricing</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition-colors">Services</a></li>
+                        <li><a href="#features" class="hover:text-cyan-400 transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Email: support@cloudhost.pro</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>24/7 Live Chat Available</li>
+                    </ul>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="w-10 h-10 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">📘</a>
+                        <a href="#" class="w-10 h-10 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">🐦</a>
+                        <a href="#" class="w-10 h-10 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">💼</a>
+                        <a href="#" class="w-10 h-10 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-400">
+                <p>© 2025 CloudHost Pro. All rights reserved.</p>
+                <p class="mt-2">Data Centers: New York, London, Tokyo, Sydney, São Paulo, Frankfurt, Singapore, Mumbai, Toronto, Amsterdam, Paris, Seoul, Dubai, Stockholm, Los Angeles</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
